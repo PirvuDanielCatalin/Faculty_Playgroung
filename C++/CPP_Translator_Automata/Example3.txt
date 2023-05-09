@@ -1,0 +1,13 @@
+p q
+p
+a b
+x y
+d a b
+d
+p ==> a , d->ad , xx ==> p
+p ==> a , a->aa , xx ==> p
+p ==> a , b->* , * ==> p
+p ==> b , d->bd , yy ==> p
+p ==> b , a->* , * ==> p
+p ==> b , b->bb , yy ==> p
+p ==> * , d->* , * ==> q

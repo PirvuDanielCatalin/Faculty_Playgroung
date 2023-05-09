@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @*@Html.Partial("_Head")*@
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        @ViewBag.Title
+    </title>
+
+    <!-- Styles -->
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    @RenderSection("styles", required: false)
+
+    <!-- Scripts -->
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/modernizr")
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/jquery")
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    @Html.Partial("_Navbar")
+    <main class="py-4 container" style="padding-top: 4.25rem !important;">
+        @RenderBody()
+    </main>
+</body>
+</html>

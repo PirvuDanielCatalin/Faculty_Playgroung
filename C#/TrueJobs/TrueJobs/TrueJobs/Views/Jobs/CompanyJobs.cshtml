@@ -1,0 +1,79 @@
+﻿@*@model IEnumerable<TrueJobs.Job>*@
+
+@model PagedList.IPagedList<TrueJobs.Job>
+@using PagedList.Mvc;
+
+@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "CompanyJobs";
+}
+
+<h2>My Jobs</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Location
+        </th>
+       
+        <th>
+            Type
+        </th>
+        <th>
+            Experience
+        </th>
+       
+        <th>
+            Company Name
+        </th>
+        <th>
+            Interest Name
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+          
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experience)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Interest.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Job_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Job_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Job_ID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)din @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("CompanyJobs",
+                                                                    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, currentFilter2 = ViewBag.Taguri }))
+

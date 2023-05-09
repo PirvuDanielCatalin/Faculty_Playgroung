@@ -1,0 +1,92 @@
+﻿@model Booktopia.Models.PartnerRequirement
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* Book Show *@
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.css" />
+    <link href="~/Content/PartnerRequirements/Index.css" rel="Stylesheet" type="text/css" />
+}
+
+@section Scripts{
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.js" defer></script>
+    <script src="~/Scripts/PartnerRequirements/Index.js" defer></script>
+}
+
+<div class="container">
+    @if (ViewBag.Rol == "Colaborator")
+    {
+        <div class="">
+            <div class="save-roles-div">
+                <button type="button" class="btn btn-primary request-add-btn">Adaugă cerere</button>
+            </div>
+        </div>
+    }
+
+    <table class="table table-hover" id="requests-table">
+        <thead>
+            <tr>
+                <th class="tbl-col-1">@Html.DisplayNameFor(model => model.IdCerere)</th>
+                <th class="tbl-col-2">@Html.DisplayNameFor(model => model.UserId)</th>
+                <th class="tbl-col-3">@Html.DisplayNameFor(model => model.User.UserName)</th>
+                <th class="tbl-col-4">@Html.DisplayNameFor(model => model.BookId)</th>
+                <th class="tbl-col-5">@Html.DisplayNameFor(model => model.Book.Titlu)</th>
+                <th class="tbl-col-6"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var requirement in ViewBag.Requirements)
+            {
+                <tr>
+                    <input type="hidden" name="IdCerere" value="@requirement.IdCerere" />
+                    <td class="tbl-col-1">@requirement.IdCerere</td>
+                    <td class="tbl-col-2">@requirement.UserId</td>
+                    <td class="tbl-col-3">@requirement.User.UserName</td>
+                    <td class="tbl-col-4">@requirement.BookId</td>
+                    <td class="tbl-col-5">@requirement.Book.Titlu</td>
+                    <td class="tbl-col-6">
+                        @if (ViewBag.Rol == "Colaborator")
+                        {
+                            <button type="button" class="btn btn-info w-32p request-show-btn">
+                                <i class="far fa-eye"></i> Vezi
+                            </button>
+                            <button type="button" class="btn btn-warning w-32p request-edit-btn">
+                                <i class="far fa-edit"></i> Modifică
+                            </button>
+                            <button type="button" class="btn btn-danger w-32p request-delete-btn" data-toggle="modal" data-target="#deleteRequestModal">
+                                <i class="far fa-trash-alt"></i> Șterge
+                            </button>
+                        }
+                        else
+                        {
+                            <button type="button" class="btn btn-success request-accept-btn w-49p">Acceptă</button>
+                            <button type="button" class="btn btn-danger request-reject-btn w-49p">Respinge</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="modal fade" id="deleteRequestModal" tabindex="-1" role="dialog" aria-labelledby="deleteRequestModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title d-inline" id="deleteRequestModalLabel">Ștergere cerere</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Sunteți sigur că vreți să ștergeți cererea?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Nu</button>
+                    <button type="button" class="btn btn-success" request-id="" id="confirmDeleteRequest">Da</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

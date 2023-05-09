@@ -1,0 +1,147 @@
+﻿@model TrueJobs.User
+
+@{
+    ViewBag.Title = "Create2";
+
+}
+
+<head>
+
+
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/Site.css" rel="stylesheet" />*@
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/respond.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('../../Content/img_biz/1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+
+</head>
+<script src="~/Scripts/jquery.min.js"></script>
+
+<body>
+    @*    <div class="wrapper">
+
+        <div class="content-wrapper">
+            <section class="content">*@
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    <main id="main" style="margin-top:100px">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div class="form-horizontal">
+                            <h2>Selecteaza domeniile de interes</h2>
+                            <hr />
+
+
+
+                            <br />
+                            <br />
+
+                            <br />
+                            <br />
+                            @Html.ValidationSummary(true)
+                            @Html.HiddenFor(model => model.User_ID)
+                            @Html.HiddenFor(model => model.FirstName)
+                            @Html.HiddenFor(model => model.LastName)
+                            @Html.HiddenFor(model => model.Experience)
+                            @Html.HiddenFor(model => model.Photo)
+
+
+
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        @Html.DropDownList("Tag_ID", ViewBag.Tag_ID as SelectList, "Select domeniile de interes", htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Users_interests, "", new { @class = "text-danger" })
+
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <button type="button" class="btn btn-default " onclick="AddTag()">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12" id="competence-tags-div">
+                                        @Html.Action("UserInterest")
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <div class="form-group">
+                                @*<button type="button" class="btn btn-default " style="color:white" onclick="location.href='@Url.Action("Details", "Users", new { email = Model.Email.TrimEnd() })'" data-dismiss="modal">Finish</button>*@
+                                <button type="button" class="btn btn-default" style="color:white" onclick="location.href='@Url.Action("Create", "WriteCVs")'">Pasul 4</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        }
+
+
+
+        @*</section>
+                </div>
+            </div>*@
+
+
+    </main>
+    <script>
+        function AddTag() {
+            var e = document.getElementById("Tag_ID");
+
+            if (e.options[e.selectedIndex].value != "") {
+                //alert(e.options[e.selectedIndex].value);
+                $.ajax({
+                    type: 'POST',
+                    data: { id: e.options[e.selectedIndex].value, elem: @Model.User_ID }, // #2
+                    url: '/Users/AddTag/',
+                    //contentType: 'application/json', #3
+                    //dataType: 'json', #2
+                    //alert("ceva");
+                    success: function () {
+                        $.get('@Url.Action("UserInterest", "Users")', {}, function (response) {
+                           alert('yuhuhu');
+                            $("#competence-tags-div").html(response);
+                        });
+                        location.reload();
+                    },
+
+                    error: function () {
+                        alert('not good');
+                    }
+                });
+            }
+        };
+    </script>
+</body>

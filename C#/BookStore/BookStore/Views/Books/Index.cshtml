@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* Book Index *@
+@section Styles{
+    <link href="~/Content/Books/Index.css" rel="Stylesheet" type="text/css" />
+}
+
+@if (TempData["message"] != null && TempData["succes"] != null)
+{
+    if ((bool)TempData["succes"])
+    {
+        <div class="alert alert-success">
+            @TempData["message"].ToString()
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            @TempData["message"].ToString()
+        </div>
+    }
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body row books-containers">
+                    @for (var i = 1; i <= 20; i++)
+                    {
+                        foreach (var book in ViewBag.books)
+                        {
+                            <div class="book-div b-1">
+                                <div class="book-title">@book.Titlu</div>
+                                <div class="book-image-div">
+                                    @{
+                                        var bookImg = "/Images/" + book.BookId + ".jpg";
+                                        var absolutePath = HttpContext.Current.Server.MapPath(bookImg);
+                                        if (System.IO.File.Exists(absolutePath))
+                                        {
+                                            <img alt="Coperta" class="book-image img-responsive" src="@bookImg" />
+                                        }
+                                        else
+                                        {
+                                            <img alt="Coperta" class="book-image img-responsive" src="~/Images/Default.jpg" />
+                                        }
+                                    }
+                                </div>
+                                <a href="/Books/Show/@book.BookId" role="button" class="btn btn-info btn-block"> >> Vezi detalii << </a>
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

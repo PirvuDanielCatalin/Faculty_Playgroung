@@ -1,0 +1,9 @@
+p q s t
+p
+a b c
+x y w
+d f e
+d
+p ==> a , d->* , x ==> q
+p ==> * , d->f , y ==> s
+s ==> a , f->* , w ==> t

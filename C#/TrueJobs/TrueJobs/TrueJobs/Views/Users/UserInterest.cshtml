@@ -1,0 +1,83 @@
+﻿@model IQueryable<TrueJobs.Interest>
+@{
+    Layout = null;
+}
+
+
+<style>
+    .img-wrap .close {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        z-index: 100;
+        background-color: #FFF;
+        padding: 5px 2px 2px;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: .2;
+        text-align: center;
+        font-size: 22px;
+        line-height: 10px;
+        border-radius: 50%;
+    }
+
+    .img-wrap:hover .close {
+        opacity: 1;
+    }
+
+    .label {
+        font-size: 85%;
+        margin-left: -7px;
+        padding-right: 6px;
+    }
+
+    .col-md-1-2 {
+        width: auto;
+        float: left;
+    }
+
+    .col-md-1-2 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 25px;
+        padding-left: 5px;
+        background-color: #28a745;
+        margin-right: 8px;
+        margin-top: 5px;
+    }
+</style>
+
+@foreach (var item in Model)
+{
+    <div class="img-wrap col-md-1-2">
+        <span data-id="@item.Interest_ID" style="color:white">@item.Name </span>
+        <span class="close" data-id="@item.Interest_ID">&times;</span>
+
+    </div>
+}
+
+
+<script>
+    $(".img-wrap .close").on('click', function () {
+        var id = $(this).closest('.img-wrap').find('span').data('id');
+        //alert('remove picture: ' + id);
+        $.ajax({
+            type: 'POST',
+            data: { id: id }, // #2
+            url: '/Users/DeleteTag',
+            //contentType: 'application/json', #3
+            //dataType: 'json', #2
+            success: function () {
+                $.get('@Url.Action("UserInterest", "Users")', {}, function (response) {
+                    //alert('yuhuhu');
+                    $("#competence-tags-div").html(response);
+                });
+                location.reload();
+            },
+            error: function () {
+                alert('not good');
+            }
+        })
+    });
+</script>

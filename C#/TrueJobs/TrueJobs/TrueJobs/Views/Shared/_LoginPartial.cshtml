@@ -1,0 +1,88 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+
+
+
+
+
+
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+
+                <li class="menu-active" style="margin-left:20px"><a href="@Url.Action("Index", "Home")#intro">Acasa</a></li>
+                <li><a href="@Url.Action("Index", "Home")#about">Despre noi</a></li>
+                <li><a href="@Url.Action("Index", "Home")#facts">Statistici</a></li>
+                <li><a href="@Url.Action("Index", "Home")#contact">Contact</a></li>
+
+                @*@Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "Details", "Users",routeValues: null, htmlAttributes: new { title = "Manage" })*@
+
+                @*@if (ViewContext.HttpContext.User.IsInRole("candidat"))
+                    {
+                        <li>
+                            @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "Details", "Users", new { email = User.Identity.GetUserName() }, null)
+                        </li>
+                    }*@
+                @*@if (User.IsInRole("companie"))
+                    {
+                        <li>
+                            @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "Details", "Companies", new { email = User.Identity.GetUserName() }, null)
+                        </li>
+                    }*@
+                @*<li>
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "Details", "Companies", new { email = User.Identity.GetUserName() }, null)
+                    </li>*@
+
+
+
+                @*<li>
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "Details", "Companies", new { email = User.Identity.GetUserName() }, null)
+                    </li>*@
+                <li>
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName().Substring(0, User.Identity.GetUserName().IndexOf('@')) + "!", "Index", "Manage")
+                </li>
+
+
+
+
+
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                @*<li><a href="@Url.Action("Register", "Account")">Cont nou</a></li>
+                    <li><a href="@Url.Action("Login", "Account")">Intra in cont</a></li>*@
+
+            </ul>
+
+        </nav><!-- #nav-menu-container -->
+
+
+
+    }
+}
+else
+{
+
+    <nav id="nav-menu-container">
+        <ul class="nav-menu">
+            <li class="menu-active" style="margin-left:20px"><a href="@Url.Action("Index", "Home")#intro">Acasa</a></li>
+            <li><a href="@Url.Action("Index", "Home")#about">Despre noi</a></li>
+            <li><a href="@Url.Action("Index", "Home")#facts">Statistici</a></li>
+            <li><a href="@Url.Action("Index", "Home")#contact">Contact</a></li>
+
+            <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+            <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+            @*<li><a href="@Url.Action("Register", "Account")">Cont nou</a></li>
+                <li><a href="@Url.Action("Login", "Account")">Intra in cont</a></li>*@
+
+        </ul>
+
+    </nav><!-- #nav-menu-container -->
+
+
+
+}

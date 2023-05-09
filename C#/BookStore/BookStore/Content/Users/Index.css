@@ -1,0 +1,25 @@
+﻿/* Users Index */
+table th {
+    text-align: center;
+    vertical-align: middle !important;
+    padding: 1.5rem !important;
+}
+
+table tr {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.save-roles-div {
+    float: right;
+}
+
+.tbl-col-1,
+.tbl-col-2,
+.tbl-col-3 {
+    width: 25%;
+}
+
+.tbl-col-4 {
+    width: 11%;
+}

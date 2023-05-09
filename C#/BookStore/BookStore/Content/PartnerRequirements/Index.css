@@ -1,0 +1,23 @@
+﻿/* Partner Requirement Index */
+
+.d-inline {
+    display: inline;
+}
+
+button.close span {
+    font-size: 20px;
+}
+
+.w-49p {
+    width: 49%;
+}
+
+.w-32p {
+    width: 32%;
+}
+
+.save-roles-div {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    text-align: right;
+}

@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JobsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Applications">
+          <Key>
+            <PropertyRef Name="Application_ID" />
+          </Key>
+          <Property Name="Application_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Job_ID" Type="int" />
+          <Property Name="User_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="Company_ID" />
+          </Key>
+          <Property Name="Company_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nchar" MaxLength="300" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="County" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="CV">
+          <Key>
+            <PropertyRef Name="CV_ID" />
+          </Key>
+          <Property Name="CV_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_ID" Type="int" />
+          <Property Name="CV_path" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Interests">
+          <Key>
+            <PropertyRef Name="Interest_ID" />
+          </Key>
+          <Property Name="Interest_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="Job_ID" />
+          </Key>
+          <Property Name="Job_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Location" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Requirements" Type="nvarchar(max)" />
+          <Property Name="Type" Type="nchar" MaxLength="50" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="Company_ID" Type="int" />
+          <Property Name="Interest_ID" Type="int" />
+          <Property Name="Attributes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nchar" MaxLength="255" />
+          <Property Name="LastName" Type="nchar" MaxLength="255" />
+          <Property Name="Email" Type="nchar" MaxLength="255" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="County" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Users_interests">
+          <Key>
+            <PropertyRef Name="Users_interests_ID" />
+          </Key>
+          <Property Name="Users_interests_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_ID" Type="int" />
+          <Property Name="Interest_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="WriteCV">
+          <Key>
+            <PropertyRef Name="WritecvID" />
+          </Key>
+          <Property Name="WritecvID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_ID" Type="int" />
+          <Property Name="PreviousWork" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Skills" Type="nvarchar(max)" />
+          <Property Name="Studies" Type="nvarchar(max)" />
+          <Property Name="Languages" Type="nvarchar(max)" />
+          <Property Name="Hobbies" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Applications_Jobs">
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="0..1" />
+          <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="Job_ID" />
+            </Principal>
+            <Dependent Role="Applications">
+              <PropertyRef Name="Job_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Applications_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Applications">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CV_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="CV" Type="Self.CV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="CV">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Interests_Interests">
+          <End Role="Interests" Type="Self.Interests" Multiplicity="1" />
+          <End Role="Interests1" Type="Self.Interests" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Interests">
+              <PropertyRef Name="Interest_ID" />
+            </Principal>
+            <Dependent Role="Interests1">
+              <PropertyRef Name="Interest_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Companies">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="0..1" />
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="Company_ID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="Company_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Interests">
+          <End Role="Interests" Type="Self.Interests" Multiplicity="0..1" />
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interests">
+              <PropertyRef Name="Interest_ID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="Interest_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_interests_Interests">
+          <End Role="Interests" Type="Self.Interests" Multiplicity="0..1" />
+          <End Role="Users_interests" Type="Self.Users_interests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interests">
+              <PropertyRef Name="Interest_ID" />
+            </Principal>
+            <Dependent Role="Users_interests">
+              <PropertyRef Name="Interest_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_interests_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Users_interests" Type="Self.Users_interests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Users_interests">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WriteCV_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="WriteCV" Type="Self.WriteCV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="WriteCV">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JobsModelStoreContainer">
+          <EntitySet Name="Applications" EntityType="Self.Applications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CV" EntityType="Self.CV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Interests" EntityType="Self.Interests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users_interests" EntityType="Self.Users_interests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WriteCV" EntityType="Self.WriteCV" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Applications_Jobs" Association="Self.FK_Applications_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="Applications" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Applications_Users" Association="Self.FK_Applications_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Applications" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CV_Users" Association="Self.FK_CV_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CV" EntitySet="CV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Interests_Interests" Association="Self.FK_Interests_Interests">
+            <End Role="Interests" EntitySet="Interests" />
+            <End Role="Interests1" EntitySet="Interests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Companies" Association="Self.FK_Jobs_Companies">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Interests" Association="Self.FK_Jobs_Interests">
+            <End Role="Interests" EntitySet="Interests" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_interests_Interests" Association="Self.FK_Users_interests_Interests">
+            <End Role="Interests" EntitySet="Interests" />
+            <End Role="Users_interests" EntitySet="Users_interests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_interests_Users" Association="Self.FK_Users_interests_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Users_interests" EntitySet="Users_interests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WriteCV_Users" Association="Self.FK_WriteCV_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="WriteCV" EntitySet="WriteCV" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JobsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="Application_ID" />
+          </Key>
+          <Property Name="Application_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Job_ID" Type="Int32" />
+          <Property Name="User_ID" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="JobsModel.FK_Applications_Users" FromRole="Application" ToRole="User" />
+          <NavigationProperty Name="Job" Relationship="JobsModel.FK_Applications_Jobs" FromRole="Application" ToRole="Job" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="Company_ID" />
+          </Key>
+          <Property Name="Company_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="County" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Jobs" Relationship="JobsModel.FK_Jobs_Companies" FromRole="Company" ToRole="Job" />
+        </EntityType>
+        <EntityType Name="CV">
+          <Key>
+            <PropertyRef Name="CV_ID" />
+          </Key>
+          <Property Name="CV_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Type="Int32" />
+          <Property Name="CV_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="JobsModel.FK_CV_Users" FromRole="CV" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Interest">
+          <Key>
+            <PropertyRef Name="Interest_ID" />
+          </Key>
+          <Property Name="Interest_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Interests1" Relationship="Self.FK_Interests_Interests" FromRole="Interests" ToRole="Interests1" />
+          <NavigationProperty Name="Interest1" Relationship="Self.FK_Interests_Interests" FromRole="Interests1" ToRole="Interests" />
+          <NavigationProperty Name="Users_interests" Relationship="Self.FK_Users_interests_Interests" FromRole="Interests" ToRole="Users_interests" />
+          <NavigationProperty Name="Jobs" Relationship="JobsModel.FK_Jobs_Interests" FromRole="Interest" ToRole="Job" />
+        </EntityType>
+        <EntityType Name="Users_interests">
+          <Key>
+            <PropertyRef Name="Users_interests_ID" />
+          </Key>
+          <Property Name="Users_interests_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Type="Int32" />
+          <Property Name="Interest_ID" Type="Int32" />
+          <NavigationProperty Name="Interest" Relationship="Self.FK_Users_interests_Interests" FromRole="Users_interests" ToRole="Interests" />
+          <NavigationProperty Name="User" Relationship="JobsModel.FK_Users_interests_Users" FromRole="Users_interests" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Interests_Interests">
+          <End Role="Interests" Type="Self.Interest" Multiplicity="1" />
+          <End Role="Interests1" Type="Self.Interest" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Interests">
+              <PropertyRef Name="Interest_ID" />
+            </Principal>
+            <Dependent Role="Interests1">
+              <PropertyRef Name="Interest_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_interests_Interests">
+          <End Role="Interests" Type="Self.Interest" Multiplicity="0..1" />
+          <End Role="Users_interests" Type="Self.Users_interests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interests">
+              <PropertyRef Name="Interest_ID" />
+            </Principal>
+            <Dependent Role="Users_interests">
+              <PropertyRef Name="Interest_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JobsEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Applications" EntityType="Self.Application" />
+          <EntitySet Name="Companies" EntityType="Self.Company" />
+          <EntitySet Name="CVs" EntityType="Self.CV" />
+          <EntitySet Name="Interests" EntityType="Self.Interest" />
+          <EntitySet Name="Users_interests" EntityType="Self.Users_interests" />
+          <AssociationSet Name="FK_Interests_Interests" Association="Self.FK_Interests_Interests">
+            <End Role="Interests" EntitySet="Interests" />
+            <End Role="Interests1" EntitySet="Interests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_interests_Interests" Association="Self.FK_Users_interests_Interests">
+            <End Role="Interests" EntitySet="Interests" />
+            <End Role="Users_interests" EntitySet="Users_interests" />
+          </AssociationSet>
+          <EntitySet Name="Users" EntityType="JobsModel.User" />
+          <AssociationSet Name="FK_Applications_Users" Association="JobsModel.FK_Applications_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CV_Users" Association="JobsModel.FK_CV_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="CV" EntitySet="CVs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_interests_Users" Association="JobsModel.FK_Users_interests_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Users_interests" EntitySet="Users_interests" />
+          </AssociationSet>
+          <EntitySet Name="WriteCVs" EntityType="JobsModel.WriteCV" />
+          <AssociationSet Name="FK_WriteCV_Users" Association="JobsModel.FK_WriteCV_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="WriteCV" EntitySet="WriteCVs" />
+          </AssociationSet>
+          <EntitySet Name="Jobs" EntityType="JobsModel.Job" />
+          <AssociationSet Name="FK_Applications_Jobs" Association="JobsModel.FK_Applications_Jobs">
+            <End Role="Job" EntitySet="Jobs" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Companies" Association="JobsModel.FK_Jobs_Companies">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Job" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Interests" Association="JobsModel.FK_Jobs_Interests">
+            <End Role="Interest" EntitySet="Interests" />
+            <End Role="Job" EntitySet="Jobs" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="County" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Applications" Relationship="JobsModel.FK_Applications_Users" FromRole="User" ToRole="Application" />
+          <NavigationProperty Name="CVs" Relationship="JobsModel.FK_CV_Users" FromRole="User" ToRole="CV" />
+          <NavigationProperty Name="Users_interests" Relationship="JobsModel.FK_Users_interests_Users" FromRole="User" ToRole="Users_interests" />
+          <NavigationProperty Name="WriteCVs" Relationship="JobsModel.FK_WriteCV_Users" FromRole="User" ToRole="WriteCV" />
+        </EntityType>
+        <Association Name="FK_Applications_Users">
+          <End Type="JobsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="JobsModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CV_Users">
+          <End Type="JobsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="JobsModel.CV" Role="CV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="CV">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_interests_Users">
+          <End Type="JobsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="JobsModel.Users_interests" Role="Users_interests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Users_interests">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="WriteCV">
+          <Key>
+            <PropertyRef Name="WritecvID" />
+          </Key>
+          <Property Name="WritecvID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Type="Int32" />
+          <Property Name="PreviousWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Skills" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Studies" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Languages" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hobbies" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="JobsModel.FK_WriteCV_Users" FromRole="WriteCV" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_WriteCV_Users">
+          <End Type="JobsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="JobsModel.WriteCV" Role="WriteCV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="WriteCV">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="Job_ID" />
+          </Key>
+          <Property Name="Job_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Requirements" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="Company_ID" Type="Int32" />
+          <Property Name="Interest_ID" Type="Int32" />
+          <Property Name="Attributes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Applications" Relationship="JobsModel.FK_Applications_Jobs" FromRole="Job" ToRole="Application" />
+          <NavigationProperty Name="Company" Relationship="JobsModel.FK_Jobs_Companies" FromRole="Job" ToRole="Company" />
+          <NavigationProperty Name="Interest" Relationship="JobsModel.FK_Jobs_Interests" FromRole="Job" ToRole="Interest" />
+        </EntityType>
+        <Association Name="FK_Applications_Jobs">
+          <End Type="JobsModel.Job" Role="Job" Multiplicity="0..1" />
+          <End Type="JobsModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="Job_ID" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="Job_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Companies">
+          <End Type="JobsModel.Company" Role="Company" Multiplicity="0..1" />
+          <End Type="JobsModel.Job" Role="Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Company_ID" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="Company_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Interests">
+          <End Type="JobsModel.Interest" Role="Interest" Multiplicity="0..1" />
+          <End Type="JobsModel.Job" Role="Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Interest">
+              <PropertyRef Name="Interest_ID" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="Interest_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JobsModelStoreContainer" CdmEntityContainer="JobsEntities2">
+          <EntitySetMapping Name="Applications">
+            <EntityTypeMapping TypeName="JobsModel.Application">
+              <MappingFragment StoreEntitySet="Applications">
+                <ScalarProperty Name="Application_ID" ColumnName="Application_ID" />
+                <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="JobsModel.Company">
+              <MappingFragment StoreEntitySet="Companies">
+                <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CVs">
+            <EntityTypeMapping TypeName="JobsModel.CV">
+              <MappingFragment StoreEntitySet="CV">
+                <ScalarProperty Name="CV_ID" ColumnName="CV_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="CV_path" ColumnName="CV_path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Interests">
+            <EntityTypeMapping TypeName="JobsModel.Interest">
+              <MappingFragment StoreEntitySet="Interests">
+                <ScalarProperty Name="Interest_ID" ColumnName="Interest_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users_interests">
+            <EntityTypeMapping TypeName="JobsModel.Users_interests">
+              <MappingFragment StoreEntitySet="Users_interests">
+                <ScalarProperty Name="Users_interests_ID" ColumnName="Users_interests_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Interest_ID" ColumnName="Interest_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="JobsModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WriteCVs">
+            <EntityTypeMapping TypeName="JobsModel.WriteCV">
+              <MappingFragment StoreEntitySet="WriteCV">
+                <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+                <ScalarProperty Name="Languages" ColumnName="Languages" />
+                <ScalarProperty Name="Studies" ColumnName="Studies" />
+                <ScalarProperty Name="Skills" ColumnName="Skills" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PreviousWork" ColumnName="PreviousWork" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="WritecvID" ColumnName="WritecvID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="JobsModel.Job">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="Attributes" ColumnName="Attributes" />
+                <ScalarProperty Name="Interest_ID" ColumnName="Interest_ID" />
+                <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Requirements" ColumnName="Requirements" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

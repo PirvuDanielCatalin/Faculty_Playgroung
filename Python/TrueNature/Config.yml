@@ -1,0 +1,12 @@
+domains_excluded:
+- facebook
+- google
+- microsoft
+- youtube
+hosts_excluded:
+- scontent.ftce2-1.fna.fbcdn.net
+- get.geo.opera.com
+- weather.opera-api.com
+- suggestions.opera-api.com
+- af.opera.com
+reports_path: 

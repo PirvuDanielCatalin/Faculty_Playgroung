@@ -1,0 +1,255 @@
+﻿@model TrueJobs.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <link href="~/Content/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('../../Content/img_biz/1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+@*@if (User.Identity.IsAuthenticated)
+    {*@
+<body>
+    @*    <div class="wrapper">
+
+        <div class="content-wrapper">
+            <section class="content">*@
+
+
+    <br />
+    <br />
+    <br />
+
+
+    <main id="main" style="margin-top:100px">
+
+
+
+
+        <section class="content">
+
+
+            <h3>Profilul meu</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box box-primary">
+                        <div class="box-body box-profile">
+                            <img class="profile-user-img img-responsive img-circle" src="~/imgpoze/@Model.Photo" alt="User picture">
+
+                            <h3 class="profile-username text-center">@Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h3>
+
+                            @if (User.IsInRole("candidat"))
+                            {
+                                <a href="@Url.Action("Edit", "Users", new { id = ViewBag.userID })" class="btn btn-default"><b>Edit profile</b></a>
+                            }
+                            <a href="@Url.Action("Details", "WriteCVs", new { id = ViewBag.writecv })" class="btn btn-default"><b>View CV</b></a>
+
+                            @*<ul class="list-group list-group-unbordered">
+                                    <li class="list-group-item">
+                                        <b>Created by</b> <p class="pull-right">@Html.DisplayFor(model => model.Author)</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b>Date</b> <p class="pull-right">@Html.DisplayFor(model => model.Date)</p>
+                                    </li>
+
+                                </ul>*@
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+
+
+
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Detalii</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <strong><i class="fa fa-book margin-r-5"></i> CV</strong>
+
+                            <br><br>
+                            @foreach (var item in Model.CVs)
+                            {
+                                if (item.CV_path.Length > 10)
+                                {
+                                    string parameterValue = item.CV_path.Substring(0, 10) + "... ";
+                                    string pat = '.' + item.CV_path.Substring(item.CV_path.ToString().LastIndexOf('.') + 1);
+                                    parameterValue += pat;
+
+                                    @Html.DisplayFor(modelItem => parameterValue)
+                                }
+                                else
+                                {
+                                    @Html.DisplayFor(modelItem => item.CV_path)
+                                }
+                                <div class="pull-right">
+                                    @Html.ActionLink(" ", "Download", new { name = @item.CV_path }, new { @class = "glyphicon glyphicon-download-alt" })
+                                </div>
+
+                                <br><br>
+                            }
+
+
+                            <hr>
+                            <strong><i class="fa fa-pencil margin-r-5"></i>Domenii de interes</strong>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    @Html.Action("UserInterest2")
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="col-md-9">
+
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs">
+                            <li class=""><a href="#activity" data-toggle="tab">Informatii</a></li>
+                            @if (User.IsInRole("candidat"))
+                            {
+                                <li><a href="#timeline" data-toggle="tab">Aplicarile mele</a></li>
+                            }   
+                        </ul>
+                        <div class="tab-content">
+                            <div class="active tab-pane" id="activity">
+                                <br />
+
+                                <div class="row post">
+
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+
+                                        <h4>Email: @Model.Email</h4>
+                                        <h4>Telefon: @Model.Phone</h4>
+                                        <h4>Judet: @Model.County</h4>
+                                        <h4>City: @Model.City</h4>
+                                        <h4>Experienta: @Model.Experience ani</h4>
+                                    </div>
+                                    <div class="col-md-4"></div>
+
+
+                                </div>
+
+
+
+
+                                <!-- /.post -->
+                            </div>
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <p>ceva</p>
+
+                                @Html.Action("AplicarileMele", "Applications", new { ID = Model.User_ID })
+
+                            </div>
+                            <!-- /.tab-pane -->
+                            <!-- /.tab-pane -->
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <br />
+        <br />
+        <br />
+
+
+
+
+    </main>
+</body>
+@*}*@
+@*<div>
+        <h4>User</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Photo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Photo)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Experience)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Experience)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.User_ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

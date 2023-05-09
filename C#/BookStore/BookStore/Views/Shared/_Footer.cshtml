@@ -1,0 +1,74 @@
+﻿<style>
+    .card-footer {
+        background-color: #f5f5f5;
+    }
+
+    .footer-info-div {
+        height: 50px;
+        line-height: 50px;
+        text-align: left;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .p-4 {
+        padding: 4rem;
+    }
+
+    .textarea {
+        width: 100%;
+    }
+
+    .logo-img {
+        width: 250px;
+        height: 200px;
+    }
+</style>
+<div class="card-footer">
+    <div class="row">
+        <div class="col-md-4 row p-4">
+            <div class="col-md-12 footer-info-div">
+                <h5 class="d-inline"><b>Program:</b></h5>
+            </div>
+            <div class="col-md-12 footer-info-div">
+                <h6>
+                    Monday - Saturday: &emsp;8:00 - 18:00<br>
+                    Sunday: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Closed
+                </h6>
+            </div>
+            <div class="col-md-12 footer-info-div">
+                <h5 class="d-inline"><b>Email:</b></h5>
+            </div>
+            <div class="col-md-12 footer-info-div">
+                <h6 class="d-inline">booktopia.contact@gmail.com</h6>
+            </div>
+        </div>
+
+        <div class="col-md-4 logo-div p-4 text-center">
+            <img class="logo-img" src="~/Images/LogoBooktopia.png">
+        </div>
+
+        <div class="row col-md-4 p-4">
+            <form class="row" action="" method="post">
+                @Html.AntiForgeryToken()
+                <div class="col-md-6">
+                    @Html.Label("subject", "Subiect", new { @class = "test" })
+                    @Html.TextBox("subject", null, new { @class = "form-control", @placeholder = "Ex: Eroare în site" })
+                </div>
+                <div class="col-md-6">
+                    @Html.Label("email", "Email", new { @class = "test" })
+                    @Html.TextBox("email", null, new { @class = "form-control", @placeholder = "Ex: nume@domeniu.com" })
+                </div>
+                <div class="col-md-12 mt-2">
+                    @Html.Label("text", "Text", new { @class = "test" })
+                    @Html.TextArea("text", null, new { @class = "form-control textarea", rows = "2", maxlength = "2000", minlength = "10" })
+                </div>
+                <div class="col-md-12 mt-2">
+                    <input type="submit" class="btn btn-success btn-block" value="Send Email">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

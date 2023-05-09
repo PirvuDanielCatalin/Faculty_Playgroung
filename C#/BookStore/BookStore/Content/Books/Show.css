@@ -1,0 +1,141 @@
+﻿/* Book Show */
+
+.d-inline {
+    display: inline;
+}
+
+button.close span {
+    font-size: 20px;
+}
+
+/* Book Info */
+.book-image {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.book-info {
+    font-size: 16px;
+    padding: 1rem;
+    font-family: consolas;
+}
+
+.book-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.add-product-div {
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+span {
+    font-size: 60px;
+    cursor: pointer;
+    width: min-content;
+    display: contents;
+}
+
+/* Rating */
+.star-selected {
+    color: gold;
+}
+
+.control-btns {
+    display: inline;
+    float: right;
+    margin-top: -20px;
+}
+
+/* Comentarii */
+.comments-container-div {
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.comments-title-div {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.comments-add-btn {
+    float: right;
+    margin-top: -44px;
+}
+
+.comment-textarea {
+    border: 1px solid rgb(162, 162, 162);
+    border-radius: 5px;
+    width: 100%;
+    min-height: 46px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 2rem;
+    outline: none;
+    resize: none;
+}
+
+.comment-post-btn {
+    border: 1px solid rgb(162, 162, 162);
+}
+
+.comments-add-input-div {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-not-logged-in {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-div {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.comment-likes,
+.comment-date,
+.comment-text,
+.comment-user {
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+}
+
+.comment-likes {
+    width: 5%;
+}
+
+.comment-date {
+    width: 10%;
+}
+
+.comment-text {
+    width: 70%;
+}
+
+    .comment-text form {
+        width: 100%;
+        display: none;
+    }
+
+        .comment-text form textarea {
+            height: 160px !important;
+        }
+
+    .comment-text p {
+        margin: 0;
+    }
+
+.comment-user {
+    width: 15%;
+}
+
+.comment-edit-btn,
+.comment-delete-btn {
+    width: 100%;
+    margin: 2px;
+}

@@ -1,0 +1,498 @@
+﻿@model TrueJobs.Company
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+    {
+        Text = "Alba",
+        Selected = true
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Arad"
+
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Argeș"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Bacău"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Bihor"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Bistrița-Năsăud"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Botoșani"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Brașov"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Brăila"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "București"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Buzău"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Caraș-Severin"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Călărași"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Cluj"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Constanța"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Covasna"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Dâmbovița"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Dolj"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Galați"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Giurgiu"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Gorj"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Harghita"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Hunedoara"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Ialomița"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Iași"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Ilfov"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Maramureș"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Mehedinți"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Mureș"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Neamț"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Olt"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Prahova"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Satu Mare"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Sălaj"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Sibiu"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Suceava"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Teleorman"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Timiș"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Tulcea"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Vaslui"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Vâlcea"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Vrancea"
+    });
+
+
+
+    List<SelectListItem> listItems2 = new List<SelectListItem>();
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Alba Iulia",
+        Selected = true
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Arad"
+
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Pitești"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Bacău"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Oradea"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Bistrița"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Botoșani"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Brașov"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Brăila"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "București"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Buzău"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Reșița"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Călărași"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Cluj-Napoca"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Constanța"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Sfântu Gheorghe"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Târgoviște"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Craiova"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Galați"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Giurgiu"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Târgu Jiu"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Miercurea Ciuc"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Deva"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Slobozia"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Iași"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Buftea"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Baia Mare"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Drobeta-Turnu Severin"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Târgu Mureș"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Piatra Neamț"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Slatina"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Ploiești"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Satu Mare"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Zalău"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Sibiu"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Suceava"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Alexandria"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Timișoara"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Tulcea"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Vaslui"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Râmnicu Vâlcea"
+    });
+    listItems2.Add(new SelectListItem
+    {
+        Text = "Focșani"
+    });
+
+
+
+}
+
+<head>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <style>
+        select {
+            width: 100%;
+        }
+    </style>
+    <link href="~/Content/css/AdminLTE.min.css" rel="stylesheet" />
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('../../Content/img_biz/1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h2 {
+            color: black;
+            text-align: center;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        /*footer {
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+        }*/
+    </style>
+
+
+</head>
+
+<main id="main" style="margin-top:100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <h2>Edit</h2>
+                <br />
+                <br />
+                <br />
+                <br />
+                @using (Html.BeginForm("Edit", "Companies", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Company</h4>
+                    <br />
+                    <br />
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.Company_ID)
+                    @Html.HiddenFor(model => model.Photo)
+                    @Html.HiddenFor(model=>model.Email) @*ascunde, si nu schimba in bd*@
+                    @*@Html.HiddenFor(model => model.City)
+                    @Html.HiddenFor(model => model.County)*@
+                    @*@Html.HiddenFor(model => model.Phone)*@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2" style="color:black">Poza</div>
+                        <div class="col-lg-9">
+                            <input type="file" name="file2" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2" style="color:black">Judet</div>
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.County, listItems, @Model.County, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.County, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="control-label col-md-2" style="color:black">Oras</div>
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.City, listItems2, @Model.City, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Save" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                }
+
+
+
+                @section Scripts {
+                    @Scripts.Render("~/bundles/jqueryval")
+                }
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+</main>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

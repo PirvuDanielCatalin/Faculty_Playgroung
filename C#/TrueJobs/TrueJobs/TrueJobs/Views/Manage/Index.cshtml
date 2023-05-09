@@ -1,0 +1,102 @@
+﻿@model TrueJobs.Models.IndexViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <link href="~/Content/css/AdminLTE.min.css" rel="stylesheet" />
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('../../Content/img_biz/1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <br />
+    <br />
+    <br />
+
+    <main id="main" style="margin-top:100px">
+
+
+
+
+        <section class="content">
+
+            <h2>@ViewBag.Title.</h2>
+            <br />
+            <br />
+            <p class="text-success">@ViewBag.StatusMessage</p>
+
+            <div>
+                <h4>Change your account settings</h4>
+                <hr />
+                <br />
+                <br />
+                @*<p>Rol:</p>*@
+                @*<p>@ViewBag.rol</p>*@
+
+                @*@if (User.IsInRole("companie"))
+                    {
+                        <p>comp</p>
+                    }*@
+
+
+
+                <p>@ViewBag.rol</p>
+
+                <dl class="dl-horizontal">
+
+                    @if (ViewBag.rol == "companie")
+                    {
+                        
+                        <button type="button" class="btn btn-default " style="color:white" onclick="location.href='@Url.Action("Details", "Companies", new { email = User.Identity.Name })'" data-dismiss="modal">Go to your profile</button>
+                    }
+                    else if (ViewBag.rol == "candidat")
+                    {
+                        <button type="button" class="btn btn-default " style="color:white" onclick="location.href='@Url.Action("Details", "Users", new { email = User.Identity.Name })'" data-dismiss="modal">Go to your profile</button>
+                    }
+
+
+
+                  
+
+                    <br />
+                    <br />
+                    @if (Model.HasPassword)
+                    {
+                        @*@Html.ActionLink("Change your password", "ChangePassword")*@
+                        <button type="button" class="btn btn-default " style="color:white" onclick="location.href='@Url.Action("ChangePassword", "Manage")'" data-dismiss="modal">Change your password</button>
+                    }
+                    else
+                    {
+                        <button type="button" class="btn btn-default " style="color:white" onclick="location.href='@Url.Action("SetPassword", "Manage")'" data-dismiss="modal">Change your password</button>
+                    }
+
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+                </dl>
+
+
+            </div>
+        </section>
+    </main>
+</body>

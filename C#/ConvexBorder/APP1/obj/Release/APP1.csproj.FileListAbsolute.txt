@@ -1,0 +1,10 @@
+C:\Users\Pirvu\Desktop\APP1\APP1\bin\Release\APP1.exe.config
+C:\Users\Pirvu\Desktop\APP1\APP1\bin\Release\APP1.exe
+C:\Users\Pirvu\Desktop\APP1\APP1\bin\Release\APP1.pdb
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Release\APP1.Window.resources
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Release\APP1.Properties.Resources.resources
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Release\APP1.csproj.GenerateResource.Cache
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Release\APP1.csproj.CoreCompileInputs.cache
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Release\APP1.exe
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Release\APP1.pdb
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Release\APP1.csprojResolveAssemblyReference.cache

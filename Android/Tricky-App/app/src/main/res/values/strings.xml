@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tricky App</string>
+
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="submit_login">Login</string>
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+
+    <string name="remove_user_btn">To remove user press that button &lt;-</string>
+    <string name="add_user_btn">To add user press that button -&gt;</string>
+    <string name="trick_msg">Hatz Johnule!\nCredeai că e așa simplu?\n\nUserul și parola se găsesc în clickListener-ul butonului de submit din LoginForm ^_^</string>
+</resources>

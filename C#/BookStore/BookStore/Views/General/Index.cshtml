@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* Control Panel *@
+<style>
+    .link-panel {
+        display: inline-block;
+        width: 46.8%;
+        padding: 4rem;
+        margin: 1rem;
+        text-align: center;
+        font-size: 30px;
+        text-decoration: none !important;
+        color: black;
+        border: 1px solid #bdbdbd;
+        border-radius: 10px;
+    }
+
+        .link-panel:hover {
+            border: 1px solid black;
+            color: black;
+        }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                @if (User.IsInRole("Administrator"))
+                {
+                    <a href="/Users/Index" class="link-panel text-center">
+                        <i class="fas fa-3x fa-users"></i><br />
+                        Gestionarea rolurilor userilor
+                    </a>
+
+                    <a href="/General/BookManagement" class="link-panel text-center">
+                        <i class="fas fa-3x fa-book"></i><br />
+                        Gestionarea cărților
+                    </a>
+                }
+                <a href="/PartnerRequirements/Index" class="link-panel text-center">
+                    <i class="far fa-3x fa-handshake"></i><br />
+                    Gestionarea cererilor partenerilor
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

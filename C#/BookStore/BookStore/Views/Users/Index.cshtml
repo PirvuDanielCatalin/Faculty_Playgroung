@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Booktopia.Models.ApplicationUser
+
+@* User Index *@
+
+@section Styles{
+    <link href="~/Content/Users/Index.css" rel="Stylesheet" type="text/css" />
+}
+
+@section Scripts{
+    <script src="~/Scripts/Users/Index.js" defer></script>
+}
+
+<div class="container">
+    <div class="">
+        <div class="save-roles-div">
+            <button type="button" class="btn btn-primary save-roles-btn">Salvează rolurile</button>
+        </div>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="tbl-col-1">@Html.DisplayNameFor(model => model.Id)</th>
+                <th class="tbl-col-2">@Html.DisplayNameFor(model => model.UserName)</th>
+                <th class="tbl-col-3">@Html.DisplayNameFor(model => model.Email)</th>
+                <th class="tbl-col-4"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in ViewBag.Users)
+            {
+                <tr>
+                    <td class="tbl-col-1">@user.Id</td>
+                    <td class="tbl-col-2">@user.UserName</td>
+                    <td class="tbl-col-3">@user.Email</td>
+                    <td class="tbl-col-4">
+                        <select class="form-control text-center">
+                            @foreach (var option in ViewBag.Roles)
+                            {
+                                var selected = (user.Roles[0].RoleId == option.Value) ? "selected" : "";
+                                <option value="@option.Value" @selected>@option.Text</option>
+                            }
+                        </select>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

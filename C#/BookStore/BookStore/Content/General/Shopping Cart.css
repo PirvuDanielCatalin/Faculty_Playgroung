@@ -1,0 +1,25 @@
+﻿/* Shopping Cart */
+.d-inline {
+    display: inline;
+}
+
+.float-right {
+    float: right;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+.w-9p {
+    width: 9%;
+}
+
+.table-empty {
+    display: none;
+}

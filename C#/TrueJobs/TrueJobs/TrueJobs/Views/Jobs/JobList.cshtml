@@ -1,0 +1,20 @@
+﻿
+
+@model PagedList.IPagedList<TrueJobs.Job>
+
+@foreach (var item in Model)
+{
+
+    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-11">
+        <div class="hovereffect">
+
+            <div class=" img-responsive" style="height:200px"></div>
+            <div class="overlay" onclick="location.href='@Url.Action("Details", "Jobs", new { id = item.Job_ID })'">
+
+                <h4>@item.Name</h4>
+                <p><a href="@Url.Action("Details", "Jobs", new { id = item.Job_ID })">Detalii</a></p>
+
+            </div>
+        </div>
+    </div>
+}

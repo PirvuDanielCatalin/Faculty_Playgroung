@@ -1,0 +1,61 @@
+﻿@model IEnumerable<TrueJobs.Application>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </th>
+        <th>
+            Numele jobului
+        </th>
+        <th>
+            Companie
+        </th>
+        <th></th>
+     
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Job.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Job.Company.Name)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.Application_ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Application_ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Application_ID })*@
+
+            <a href="@Url.Action("Details", "Users", new { email = item.User.Email})">Vizioneaza profilul</a>|
+            <a href="@Url.Action("SendEmail", "Applications", new { email = item.User.Email, jb = item.Job.Name })">Invita la interviu</a>
+
+        </td>
+    </tr>
+}
+
+</table>

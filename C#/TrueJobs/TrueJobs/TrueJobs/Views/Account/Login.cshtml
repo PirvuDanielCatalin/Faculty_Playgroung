@@ -1,0 +1,86 @@
+﻿@using TrueJobs.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<head>
+    <link href="~/Content/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('../../Content/img_biz/facts-bg2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h2 {
+            color: black;
+            text-align: center
+        }
+
+        a {
+            color: black;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+    </style>
+</head>
+<body>
+    <main id="main" style="margin-top:100px">
+        <br />
+
+
+        <div class="login-box">
+            <div class="login-logo">
+                Log in
+            </div>
+            <div class="login-box-body">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+            @Html.AntiForgeryToken()
+            <div class="form-group has-feedback">
+
+                @Html.TextBoxFor(m => m.Email, new { placeholder = "Email", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="form-group has-feedback">
+                @Html.PasswordFor(m => m.Password, new { placeholder = "Parola", @class = "form-control" })
+            </div>
+            <div class="form-group has-feedback">
+
+                <div class="checkbox">
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe, new { style = "color:black" })
+                </div>
+
+            </div>
+            <div class="form-group has-feedback">
+                <input type="submit" value="Log in" class="btn btn-default" />
+            </div>
+
+
+                }
+            </div>
+
+            </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+      <br />
+
+
+
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+    </main>
+
+
+</body>

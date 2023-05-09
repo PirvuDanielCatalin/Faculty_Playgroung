@@ -1,0 +1,246 @@
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\obj\Debug\Booktopia.csprojAssemblyReference.cache
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\obj\Debug\Booktopia.csproj.CoreCompileInputs.cache
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\ApplicationInsights.config
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Booktopia.dll.config
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Booktopia.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Booktopia.pdb
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\csc.exe
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\csc.exe.config
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\csc.rsp
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\csi.exe
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\csi.exe.config
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\csi.rsp
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.AppContext.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Collections.Immutable.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Console.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.IO.Compression.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.IO.FileSystem.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.IO.Pipes.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Reflection.Metadata.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Security.AccessControl.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Security.Claims.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.ValueTuple.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Xml.XPath.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\vbc.exe
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\vbc.exe.config
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\vbc.rsp
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\VBCSCompiler.exe
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\roslyn\VBCSCompiler.exe.config
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Antlr3.Runtime.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\EntityFramework.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\EntityFramework.SqlServer.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.DependencyCollector.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.Web.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.WindowsServer.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.ApplicationInsights.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.Google.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Web.Infrastructure.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Newtonsoft.Json.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Owin.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.Helpers.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.Mvc.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.Optimization.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.Razor.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.WebPages.Deployment.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.WebPages.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.WebPages.Razor.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\WebGrease.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.Helpers.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.Mvc.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.Optimization.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.Razor.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.WebPages.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.WebPages.Deployment.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Web.WebPages.Razor.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Newtonsoft.Json.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Antlr3.Runtime.pdb
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\EntityFramework.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\EntityFramework.SqlServer.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.Google.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.DependencyCollector.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.WindowsServer.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.AI.Web.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\obj\Debug\Booktopia.csproj.CopyComplete
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\obj\Debug\Booktopia.dll
+D:\Facultate\An 3\Semestrul 1\Dezvoltarea Aplicatiilor Web\Laborator\Proiect\Booktopia\Booktopi\Booktopia\obj\Debug\Booktopia.pdb
+D:\Proiecte\DAW\Booktopia\bin\ApplicationInsights.config
+D:\Proiecte\DAW\Booktopia\bin\Booktopia.dll.config
+D:\Proiecte\DAW\Booktopia\bin\Booktopia.dll
+D:\Proiecte\DAW\Booktopia\bin\Booktopia.pdb
+D:\Proiecte\DAW\Booktopia\bin\roslyn\csc.exe
+D:\Proiecte\DAW\Booktopia\bin\roslyn\csc.exe.config
+D:\Proiecte\DAW\Booktopia\bin\roslyn\csc.rsp
+D:\Proiecte\DAW\Booktopia\bin\roslyn\csi.exe
+D:\Proiecte\DAW\Booktopia\bin\roslyn\csi.exe.config
+D:\Proiecte\DAW\Booktopia\bin\roslyn\csi.rsp
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Proiecte\DAW\Booktopia\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.AppContext.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Collections.Immutable.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Console.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.IO.Compression.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.IO.FileSystem.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.IO.Pipes.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Reflection.Metadata.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Security.AccessControl.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Security.Claims.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.ValueTuple.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Xml.XPath.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Proiecte\DAW\Booktopia\bin\roslyn\vbc.exe
+D:\Proiecte\DAW\Booktopia\bin\roslyn\vbc.exe.config
+D:\Proiecte\DAW\Booktopia\bin\roslyn\vbc.rsp
+D:\Proiecte\DAW\Booktopia\bin\roslyn\VBCSCompiler.exe
+D:\Proiecte\DAW\Booktopia\bin\roslyn\VBCSCompiler.exe.config
+D:\Proiecte\DAW\Booktopia\bin\Antlr3.Runtime.dll
+D:\Proiecte\DAW\Booktopia\bin\EntityFramework.dll
+D:\Proiecte\DAW\Booktopia\bin\EntityFramework.SqlServer.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.DependencyCollector.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.Web.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.WindowsServer.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.ApplicationInsights.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.Google.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Web.Infrastructure.dll
+D:\Proiecte\DAW\Booktopia\bin\Newtonsoft.Json.dll
+D:\Proiecte\DAW\Booktopia\bin\Owin.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Helpers.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Mvc.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Optimization.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Razor.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.WebPages.Deployment.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.WebPages.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.WebPages.Razor.dll
+D:\Proiecte\DAW\Booktopia\bin\WebGrease.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Helpers.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Mvc.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Optimization.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Razor.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Web.WebPages.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Web.WebPages.Deployment.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Web.WebPages.Razor.xml
+D:\Proiecte\DAW\Booktopia\bin\Newtonsoft.Json.xml
+D:\Proiecte\DAW\Booktopia\bin\Antlr3.Runtime.pdb
+D:\Proiecte\DAW\Booktopia\bin\EntityFramework.xml
+D:\Proiecte\DAW\Booktopia\bin\EntityFramework.SqlServer.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.Google.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.DependencyCollector.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.WindowsServer.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.AI.Web.xml
+D:\Proiecte\DAW\Booktopia\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Proiecte\DAW\Booktopia\obj\Debug\Booktopia.csprojAssemblyReference.cache
+D:\Proiecte\DAW\Booktopia\obj\Debug\Booktopia.csproj.CoreCompileInputs.cache
+D:\Proiecte\DAW\Booktopia\obj\Debug\Booktopia.csproj.CopyComplete
+D:\Proiecte\DAW\Booktopia\obj\Debug\Booktopia.dll
+D:\Proiecte\DAW\Booktopia\obj\Debug\Booktopia.pdb
+D:\Proiecte\DAW\Booktopia\bin\System.Net.Http.Formatting.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Http.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Http.WebHost.dll
+D:\Proiecte\DAW\Booktopia\bin\System.Net.Http.Formatting.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Http.xml
+D:\Proiecte\DAW\Booktopia\bin\System.Web.Http.WebHost.xml

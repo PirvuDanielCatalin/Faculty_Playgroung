@@ -1,0 +1,115 @@
+﻿@model TrueJobs.WriteCV
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<head>
+   <style>
+        body {
+           
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<h2>Details</h2>
+
+<div>
+    <h4>WriteCV</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.FirstName)
+        </dd>
+
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.LastName)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousWork)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Studies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Studies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Languages)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Languages)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hobbies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hobbies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.FirstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+    @if (User.IsInRole("candidat"))
+    {
+        <a href="@Url.Action("Edit", "WriteCVs", new { id = Model.WritecvID })" class="btn btn-default"><b>Edit CV</b></a>
+
+
+    }
+    <a href="@Url.Action("Details", "Users", new { email = Model.Email })" class="btn btn-default"><b>Back</b></a>
+</p>

@@ -1,0 +1,136 @@
+﻿@model TrueJobs.Company
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="~/Content/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('../../Content/img_biz/1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+
+@*@if (User.Identity.IsAuthenticated && User.IsInRole("companie"))
+{*@
+<main id="main" style="margin-top:100px">
+
+    <br />
+    <br />
+    <br />
+
+
+    <section class="content">
+
+
+        <h3>Profil</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box box-primary">
+                    <div class="box-body box-profile">
+                        <img class="profile-user-img img-responsive img-circle" src="~/imgpoze/@Model.Photo" alt="User picture">
+
+                        <h3 class="profile-username text-center">@Html.DisplayFor(model => model.Name)</h3>
+
+                        <a href="@Url.Action("Edit", "Companies", new { id = ViewBag.compId })" class="btn btn-default"><b>Edit profile</b></a>
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Detalii</h3>
+                    </div>
+
+
+                    <div class="box-body">
+                        <strong><i class="fa fa-location-arrow margin-r-5"></i>Locatie</strong>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <p> @Model.City, @Model.County</p>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <strong><i class="fa fa-envelope margin-r-5"></i>Email</strong>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <p>@Model.Email</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <strong><i class="fa fa-phone margin-r-5"></i>Telefon</strong>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <p> @Model.Phone</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class=""><a href="#activity" data-toggle="tab">Joburi</a></li>
+                        <li><a href="#timeline" data-toggle="tab">Aplicanti</a></li>
+
+                    </ul>
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="activity">
+                            <br />
+                            <a href="@Url.Action("Create", "Jobs")" class="btn btn-default"><b>Adauga job</b></a>
+
+                            @*@Html.Partial("CompanyJobs")*@
+                            @*@Html.Action("Companies", "CompanyJobs", new { id = 15});*@
+                            @*@Html.Partial("CompanyJobs", new ViewDataDictionary { { "id", 15 } })*@
+
+
+                            @Html.Action("CompanyJobs", "Jobs", new { ID = Model.Company_ID })
+
+
+
+
+                            <!-- /.post -->
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="timeline">
+                            <!-- The timeline -->
+                         
+
+                            @Html.Action("Index", "Applications", new { email = Model.Email.TrimEnd() })
+
+                        </div>
+                        <!-- /.tab-pane -->
+                        <!-- /.tab-pane -->
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+
+        </div>
+    </section>
+    <script src="~/Content/css/Admin/bootstrap.min.js"></script>
+
+
+    <br />
+    <br />
+    <br />
+</main>
+
+@*}*@

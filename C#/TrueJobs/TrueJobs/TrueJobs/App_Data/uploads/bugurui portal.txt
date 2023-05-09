@@ -1,0 +1,28 @@
+
+
+
+
+tickets/Newticket (trebuie schimbat layoutul)
+apoi din pagina asta am 3 chestii unde nu trebuie sa schimb laayout
+("Create", "Tickets")'
+"Create", "PIFTickets")'; //buun
+("Create", "Tehnic_Tickets")';
+
+
+tickets/index
+tickets/indexsolicitant
+
+piftickets/index
+piftickets/indexSolicitant
+
+tehnic_tickets/index
+tehnic_tickets/indexSolicitant
+
+details de la tickete
+
+
+am modificat in details de la tickete
+si layout
+
+
+pifticket-alocare create2

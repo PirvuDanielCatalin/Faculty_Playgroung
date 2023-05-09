@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "NoRight";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container text-center">
+    <iframe src="https://giphy.com/embed/ULKnZ7hW07rlS" width="480" height="384" frameBorder="0"
+            class="giphy-embed" allowFullScreen></iframe>
+    <br />
+    <br />
+    <h1>
+        @if(TempData["message"] != null)
+        {
+            <b>@TempData["message"].ToString()</b>
+        }
+    </h1>
+</div>
+

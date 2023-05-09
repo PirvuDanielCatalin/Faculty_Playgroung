@@ -1,0 +1,83 @@
+﻿@model Booktopia.Models.Book
+
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .form-horizontal .control-label {
+        margin-bottom: 5px;
+        text-align: left !important;
+    }
+    form {
+        width: 60%;
+        margin: auto;
+    }
+</style>
+
+<h1 class="text-center">Adaugă o nouă carte</h1>
+@using (Html.BeginForm("New", "Books", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Titlu, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Titlu, new { htmlAttributes = new { @class = "form-control", @Value = "titlu_test" } })
+                @Html.ValidationMessageFor(model => model.Titlu, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Autor, htmlAttributes: new { @class = "control-label col-md-12"})
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Autor, new { htmlAttributes = new { @class = "form-control", @Value = "autor_test" } })
+                @Html.ValidationMessageFor(model => model.Autor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Editura, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Editura, new { htmlAttributes = new { @class = "form-control", @Value = "editura_test" } })
+                @Html.ValidationMessageFor(model => model.Editura, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descriere, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Descriere, new { htmlAttributes = new { @class = "form-control", @Value = "descriere_test_123456789" } })
+                @Html.ValidationMessageFor(model => model.Descriere, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fotografie, htmlAttributes: new { @class = "control-label col-md-12"})
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Fotografie, new { htmlAttributes = new { @class = "form-control", @Value = "foto_test" } })
+                @Html.ValidationMessageFor(model => model.Fotografie, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Pret, htmlAttributes: new { @class = "control-label col-md-12" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Pret, new { htmlAttributes = new { @class = "form-control", @Value = "1234" } })
+                @Html.ValidationMessageFor(model => model.Pret, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-6">
+                <input type="reset" value="Reset" class="btn btn-primary btn-block" />
+            </div>
+            <div class="col-md-6">
+                <input type="submit" value="Save" class="btn btn-success btn-block" />
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="50dp"
+    android:height="50dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <group
+        android:name="star_group"
+        android:pivotX="32"
+        android:pivotY="32">
+        <path
+            android:name="star"
+            android:fillColor="#FFEB3B"
+            android:pathData="M 48,54 L 31,42 15,54 21,35 6,23 25,23 32,4 40,23 58,23 42,35 z"
+            android:strokeWidth="1"
+            android:strokeColor="#000000" />
+    </group>
+</vector>

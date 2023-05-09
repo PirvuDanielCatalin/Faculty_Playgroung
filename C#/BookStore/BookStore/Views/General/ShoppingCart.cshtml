@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "ShoppingCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.css" />
+    <link href="~/Content/General/Shopping Cart.css" rel="Stylesheet" type="text/css" />
+}
+
+@section Scripts{
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.js" defer></script>
+    <script src="~/Scripts/General/ShoppingCart.js" defer></script>
+}
+
+<div class="container">
+    <div class="table-notempty">
+        <table class="table table-hover" id="session-table">
+            <thead>
+                <tr>
+                    <th class="tbl-col-1">BookId</th>
+                    <th class="tbl-col-2">Titlu</th>
+                    <th class="tbl-col-3">Cantitate</th>
+                    <th class="tbl-col-4">Pret</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="text-right">
+            <div class="total-price m-1"></div>
+            <div class="m-1">
+                <button type="button" class="btn btn-default w-9p pay-btn"
+                        data-toggle="modal" data-target="#shoppingCartModal">
+                    Plătește
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="table-empty">
+        <h1 class="text-center"><i class="far fa-frown-open"></i> Nu există produse în coșul de cumpărături.</h1>
+    </div>
+</div>
+<div class="modal fade" id="shoppingCartModal" tabindex="-1" role="dialog" aria-labelledby="shoppingCartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title d-inline" id="shoppingCartModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Comanda a fost procesată!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success pay-btn-confirm-msg" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,328 @@
+﻿@model TrueJobs.Job
+
+@{
+    ViewBag.Title = "Edit";
+
+
+
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+    {
+        Text = "Alba",
+
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Arad"
+
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Argeș"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Bacău"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Bihor"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Bistrița-Năsăud"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Botoșani"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Brașov"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Brăila"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "București"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Buzău"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Caraș-Severin"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Călărași"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Cluj"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Constanța"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Covasna"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Dâmbovița"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Dolj"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Galați"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Giurgiu"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Gorj"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Harghita"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Hunedoara"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Ialomița"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Iași"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Ilfov"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Maramureș"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Mehedinți"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Mureș"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Neamț"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Olt"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Prahova"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Satu Mare"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Sălaj"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Sibiu"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Suceava"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Teleorman"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Timiș"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Tulcea"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Vaslui"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Vâlcea"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Vrancea"
+    });
+
+
+}
+<head>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <style>
+        select {
+            width: 100%;
+        }
+    </style>
+    <link href="~/Content/css/AdminLTE.min.css" rel="stylesheet" />
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('../../Content/img_biz/1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h2 {
+            color: black;
+            text-align: center
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<main id="main" style="margin-top:100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+
+                <h2>Edit</h2>
+
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Job</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.Job_ID)
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label col-md-2" style="color:black">Locatie</div>
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Location, listItems, Model.Location, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Requirements, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Requirements, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Requirements, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Experience, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Experience, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Experience, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Company_ID, "Company_ID", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("Company_ID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Company_ID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p style=" margin-left:20px">Interest</p>
+                        <div class="col-md-10">
+                            @Html.DropDownList("Interest_ID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Interest_ID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Attributes, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Attributes, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Attributes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Save" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                }
+
+
+                @section Scripts {
+                    @Scripts.Render("~/bundles/jqueryval")
+                }
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+</main>
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@

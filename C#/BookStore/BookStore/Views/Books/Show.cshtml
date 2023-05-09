@@ -1,0 +1,199 @@
+﻿@model Booktopia.Models.Book
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* Book Show *@
+@section Styles{
+    <link href="~/Content/Books/Show.css" rel="Stylesheet" type="text/css" />
+}
+
+@section Scripts{
+    <script src="~/Scripts/jquery.textarea_autosize.min.js" defer></script>
+    <script src="~/Scripts/Books/Show.js" defer></script>
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body row">
+                    <div class="col-md-4 card">
+                        <div class="book-image-div card">
+                            @{
+                                var bookImg = "/Images/" + Model.BookId + ".jpg";
+                                var absolutePath = HttpContext.Current.Server.MapPath(bookImg);
+                                if (System.IO.File.Exists(absolutePath))
+                                {
+                                    <img alt="Coperta" class="book-image img-responsive" src="@bookImg" />
+                                }
+                                else
+                                {
+                                    <img alt="Coperta" class="book-image img-responsive" src="~/Images/Default.jpg" />
+                                }
+                            }
+                        </div>
+                        <div class="rating-bar-div card text-center b-1">
+                            <!-- Rating -->
+                            <span class="star" name="1">☆</span>
+                            <span class="star" name="2">☆</span>
+                            <span class="star" name="3">☆</span>
+                            <span class="star" name="4">☆</span>
+                            <span class="star" name="5">☆</span>
+                        </div>
+                    </div>
+                    <div class="col-md-8 card b-1">
+                        <!-- Informatii -->
+                        <div class="book-info">
+                            <div class="book-title">
+                                <b>@Html.DisplayFor(model => model.Titlu)</b>
+                            </div>
+                            @if (ViewBag.afisareButoane)
+                            {
+                                <div class="control-btns text-right">
+                                    <button title="Modifică cartea" type="button" class="btn btn-primary edit-book-btn">
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                    <button title="Șterge cartea" type="button" class="btn btn-danger"
+                                            data-toggle="modal" data-target="#deleteBookModal">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+                                </div>
+
+                            }
+                        </div>
+                        <div class="book-info">
+                            <b>@Html.DisplayNameFor(model => model.Autor):</b>&nbsp;@Html.DisplayFor(model => model.Autor)
+                        </div>
+                        <div class="book-info">
+                            <b>@Html.DisplayNameFor(model => model.Editura):</b>&nbsp;@Html.DisplayFor(model => model.Editura)
+                        </div>
+                        <div class="book-info">
+                            <b>@Html.DisplayNameFor(model => model.Descriere)</b><br>@Html.DisplayFor(model => model.Descriere)
+                        </div>
+                        <div class="book-info">
+                            <b>@Html.DisplayNameFor(model => model.Pret):</b>&nbsp;@Html.DisplayFor(model => model.Pret) lei
+                        </div>
+                        <div class="add-product-div">
+                            <input type="button" class="btn btn-default add-product-btn"
+                                   isAuthenticated="@if (User.Identity.IsAuthenticated) { @Html.Raw("true") } else { @Html.Raw("false") }"
+                                   book-id="@Html.DisplayFor(model => model.BookId)"
+                                   value="Adaugă în coș">
+                        </div>
+                    </div>
+                    <!-- Comentarii -->
+                    <div class="col-md-12 comments-container-div">
+                        <div class="comments-title-div">Comentarii</div>
+                        <div class="comments-add-div">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <div class="comments-add-btn-div">
+                                    <button type="button" class="btn btn-primary comments-add-btn">Adaugă un comentariu</button>
+                                </div>
+                                <form class="comment-form">
+                                    <div class="comments-add-input-div">
+                                        <textarea rows="1" class="comment-textarea" name="comment-text" required maxlength="2000"></textarea>
+                                        <button title="Postează comentariul" type="submit" class="btn btn-default comment-post-btn">
+                                            <i class="fas fa-2x fa-comment"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            }
+                            else
+                            {
+                                <div class="comment-not-logged-in">
+                                    @Html.Raw("Nu poți scrie comentarii fară a fi autentificat!")
+                                    @Html.Raw("Autentifică-te accesând : ")
+                                    <a href="/Account/Login">Log In</a>.
+                                    @Html.Raw("Dacă nu ai un account, înregistrează-te accesând : ")
+                                    <a href="/Account/Register">Register</a>
+                                </div>
+                            }
+                        </div>
+                        <div class="comments-div">
+                            @foreach (var bookComment in ViewBag.comments)
+                            {
+                                <div class="comment-div b-1">
+                                    <input type="hidden" name="bookCommentId" value="@bookComment.BookCommentId" />
+                                    <div class="comment-likes">
+                                        @bookComment.Likes
+                                    </div>
+                                    <div class="comment-date">
+                                        @bookComment.DataAprobare.ToString("dd/MM/yyyy").Replace('-', '/')
+                                    </div>
+                                    <div class="comment-text">
+                                        <p>@bookComment.Comentariu</p>
+                                        <form>
+                                            <textarea rows="2" class="comment-textarea replacement-textarea" required>@bookComment.Comentariu</textarea>
+                                            <button type="submit" class="btn btn-success replacement-textarea-save-btn"><i class="far fa-2x fa-save"></i></button>
+                                        </form>
+                                    </div>
+                                    <div class="comment-user">
+                                        <div>@bookComment.User.UserName</div>
+                                        @{
+                                            var isAdmin = User.IsInRole("Administrator");
+                                            var username = User.Identity.Name;
+                                            var comment_user = bookComment.User.UserName;
+                                            var comment_autor = (username == comment_user);
+                                        }
+                                        <br />
+                                        @if (isAdmin || comment_autor)
+                                        {
+                                            <button title="Modifică comentariul" type="button" class="btn btn-default comment-edit-btn">
+                                                <i class="far fa-2x fa-edit"></i>
+                                            </button>
+                                            <button title="Șterge comentariul" type="button" class="btn btn-default comment-delete-btn"
+                                                    data-toggle="modal" data-target="#deleteCommentModal">
+                                                <i class="far fa-2x fa-trash-alt"></i>
+                                            </button>
+                                        }
+
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="deleteBookModal" tabindex="-1" role="dialog" aria-labelledby="deleteBookModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title d-inline" id="deleteBookModalLabel">Ștergere carte</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Sunteți sigur că vreți să ștergeți cartea?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Nu</button>
+                        <button type="button" class="btn btn-success" book-id="" id="confirmDeleteBook">Da</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="deleteCommentModal" tabindex="-1" role="dialog" aria-labelledby="deleteCommentModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title d-inline" id="deleteCommentModalLabel">Ștergere comentariul</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Sunteți sigur că vreți să ștergeți comentariul?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Nu</button>
+                        <button type="button" class="btn btn-success" comment-id="" id="confirmDeleteComment">Da</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

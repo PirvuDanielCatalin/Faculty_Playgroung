@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+    <link href="~/Content/img_biz/favicon.png" rel="icon">
+    <link href="~/Content/img_biz/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/Content/css/lightbox.min.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+   
+</head>
+<body @*style="background-color: #88ff4d"*@>
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+    
+    
+    <!--==========================
+      Header
+    ============================-->
+    <header id="header">
+        <div class="container-fluid">
+
+            <div id="logo" class="pull-left">
+                <h1><a href="@Url.Action("Index", "Home")" class="scrollto">TrueJobs</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+            </div>
+
+        
+                    @Html.Partial("_LoginPartial")
+             
+        </div>
+    </header><!-- #header -->
+
+
+
+    @RenderBody()
+    
+    <footer id="footer" >
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>TrueJobs</strong>. All Rights Reserved
+            </div>
+
+        </div>
+        @*© Copyright TrueJobs. All Rights Reserved *@
+    </footer>
+
+    @*@Scripts.Render("~/bundles/jquery")
+      @Scripts.Render("~/bundles/bootstrap")*@
+
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-migrate.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/easing.min.js"></script>
+    <script src="~/Scripts/hoverIntent.js"></script>
+    <script src="~/Scripts/superfish.min.js"></script>
+    <script src="~/Scripts/wow.min.js"></script>
+    <script src="~/Scripts/waypoints.min.js"></script>
+    <script src="~/Scripts/counterup.min.js"></script>
+    <script src="~/Scripts/isotope.pkgd.min.js"></script>
+    <script src="~/Scripts/lightbox.min.js"></script>
+    <script src="~/Scripts/jquery.touchSwipe.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

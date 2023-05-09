@@ -1,0 +1,60 @@
+C:\Users\Pirvu\Desktop\APP1\APP1\bin\Debug\APP1.exe.config
+C:\Users\Pirvu\Desktop\APP1\APP1\bin\Debug\APP1.exe
+C:\Users\Pirvu\Desktop\APP1\APP1\bin\Debug\APP1.pdb
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Debug\ConvexBorder.csprojResolveAssemblyReference.cache
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Debug\APP1.Window.resources
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Debug\APP1.Properties.Resources.resources
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Debug\ConvexBorder.csproj.GenerateResource.Cache
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Debug\ConvexBorder.csproj.CoreCompileInputs.cache
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Debug\APP1.exe
+C:\Users\Pirvu\Desktop\APP1\APP1\obj\Debug\APP1.pdb
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\bin\Debug\APP1.exe.config
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\bin\Debug\APP1.exe
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\bin\Debug\APP1.pdb
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\obj\Debug\ConvexBorder.csprojResolveAssemblyReference.cache
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\obj\Debug\APP1.Window.resources
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\obj\Debug\APP1.Properties.Resources.resources
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\obj\Debug\ConvexBorder.csproj.GenerateResource.Cache
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\obj\Debug\ConvexBorder.csproj.CoreCompileInputs.cache
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\obj\Debug\APP1.exe
+C:\Users\Pirvu\Desktop\ConvexBorder\APP1\obj\Debug\APP1.pdb
+C:\Users\Pirvu\Desktop\Convex Border\APP1\bin\Debug\APP1.exe.config
+C:\Users\Pirvu\Desktop\Convex Border\APP1\bin\Debug\APP1.exe
+C:\Users\Pirvu\Desktop\Convex Border\APP1\bin\Debug\APP1.pdb
+C:\Users\Pirvu\Desktop\Convex Border\APP1\obj\Debug\ConvexBorder.csprojResolveAssemblyReference.cache
+C:\Users\Pirvu\Desktop\Convex Border\APP1\obj\Debug\APP1.Window.resources
+C:\Users\Pirvu\Desktop\Convex Border\APP1\obj\Debug\APP1.Properties.Resources.resources
+C:\Users\Pirvu\Desktop\Convex Border\APP1\obj\Debug\ConvexBorder.csproj.GenerateResource.Cache
+C:\Users\Pirvu\Desktop\Convex Border\APP1\obj\Debug\ConvexBorder.csproj.CoreCompileInputs.cache
+C:\Users\Pirvu\Desktop\Convex Border\APP1\obj\Debug\APP1.exe
+C:\Users\Pirvu\Desktop\Convex Border\APP1\obj\Debug\APP1.pdb
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\bin\Debug\APP1.exe.config
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\bin\Debug\APP1.exe
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\bin\Debug\APP1.pdb
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\obj\Debug\ConvexBorder.csprojResolveAssemblyReference.cache
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\obj\Debug\APP1.Window.resources
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\obj\Debug\APP1.Properties.Resources.resources
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\obj\Debug\ConvexBorder.csproj.GenerateResource.Cache
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\obj\Debug\ConvexBorder.csproj.CoreCompileInputs.cache
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\obj\Debug\APP1.exe
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Convex Border\APP1\obj\Debug\APP1.pdb
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\bin\Debug\APP1.exe.config
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\bin\Debug\APP1.exe
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\bin\Debug\APP1.pdb
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\ConvexBorder.csprojResolveAssemblyReference.cache
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\APP1.Window.resources
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\APP1.Properties.Resources.resources
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\ConvexBorder.csproj.GenerateResource.Cache
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\ConvexBorder.csproj.CoreCompileInputs.cache
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\APP1.exe
+D:\GoogleDrive Grupa X34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\APP1.pdb
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\bin\Debug\APP1.exe.config
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\bin\Debug\APP1.exe
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\bin\Debug\APP1.pdb
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\ConvexBorder.csprojAssemblyReference.cache
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\APP1.Window.resources
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\APP1.Properties.Resources.resources
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\ConvexBorder.csproj.GenerateResource.cache
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\ConvexBorder.csproj.CoreCompileInputs.cache
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\APP1.exe
+D:\GoogleDrive GrupaX34\Anul II\Geometrie Computationala\Proiecte\Proiect (C#)\APP1\obj\Debug\APP1.pdb

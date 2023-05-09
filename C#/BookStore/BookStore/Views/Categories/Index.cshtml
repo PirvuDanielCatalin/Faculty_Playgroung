@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .float-right {
+        float: right;
+    }
+
+    .p-2 {
+        padding: 0.5rem;
+    }
+
+    .pb-2 {
+        padding-bottom: 0.5rem;
+    }
+
+    .d-inline {
+        display: inline;
+    }
+
+    .text-left {
+        text-align: left !important;
+    }
+
+    .card-header {
+        height: 50px;
+    }
+</style>
+
+
+@if (TempData["message"] != null)
+{
+    if ((bool)TempData["status"])
+    {
+        <div class="alert alert-success">
+            @TempData["message"]
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            @TempData["message"]
+        </div>
+    }
+}
+
+<div class="card">
+    <div class="card-header">
+        <button class="btn btn-primary float-right" data-toggle="modal" data-target="#CategoryModal">
+            Adaugă o nouă categorie
+        </button>
+    </div>
+    <div class="card-body container">
+        @foreach (var category in ViewBag.categories)
+        {
+            <div class="category-div p-2">
+                <button class="btn btn-info">@category.Nume</button>
+            </div>
+        }
+    </div>
+    <div class="modal fade" id="CategoryModal" tabindex="-1" role="dialog" aria-labelledby="CategoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title d-inline" id="CategoryModalLabel">Adaugă o nouă categorie</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @model Booktopia.Models.Category
+                    @using (Html.BeginForm("New", "Categories", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Nume, htmlAttributes: new { @class = "control-label col-md-12 pb-2 text-left" })
+                                <div class="col-md-12">
+                                    @Html.EditorFor(model => model.Nume, new { htmlAttributes = new { @class = "form-control", @required = "true" } })
+                                    @Html.ValidationMessageFor(model => model.Nume, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="submit" value="Create" class="btn btn-success btn-block" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    @*<button type="button" class="btn btn-success" id="paymentDoneBtn">OK</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

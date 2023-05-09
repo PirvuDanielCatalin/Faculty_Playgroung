@@ -1,0 +1,7 @@
+--------------------------------------------------------------------------------------------
+Scnarea unui site cu multe vulnerabilitati
+--------------------------------------------------------------------------------------------
+docker run -d -p 80:80 citizenstig/nowasp
+wapiti -u http://localhost/index.php/ -o /shared_folder/Multillidae -v 2 --color -f json| tee /shared_folder/WapitiLog
+wapiti -u http://localhost/index.php/ -m all -o /shared_folder/MultillidaeAll -v 2 --color | tee /shared_folder/WapitiLogAll
+skipfish -o /shared_folder/MultillidaeSkipfish http://localhost/index.php/ | tee /shared_folder/Skipfish

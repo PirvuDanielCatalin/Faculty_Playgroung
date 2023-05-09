@@ -1,0 +1,34 @@
+Profi 
+Calea Sever Bocu, nr. 31, Timisoara
+contact@profi.ro
+ +40 372 568 946
+ 
+ 1) 
+	nume: Casier
+	locatie: Strada Ritmului 16 Bucuresti
+	domeniu: Vanzari
+	desctiere: Raspunde de tinerea corecta si la zi a evidentei primare privind activitatile de incasari si plati prin casierie
+    cerinte: - Studii medii
+			 - Abilitati de comunicare
+			 - Seriozitate in indeplinirea sarcinilor
+			 - Disponibilitatea de a lucra in program 2 ture
+	atribute: - Scanarea proceselor si eliberarea bonului fiscal
+	          - Evidenta stocului de tigari
+			  - Aprovizionarea standurilor din apropierea caselor de marcat
+	tip: Full-Time
+	experienta: 1-5 ani
+
+ 2)
+	nume: Junior Resuere Umane
+	locatie: Calea Sever Bocu, nr. 31, Timisoara
+	descriere: Vei acorda suport in administrarea personalului din centrele noastre logistice
+	cerinte: - Studii superioare in domeniul juritic finalizate sau in curs de finalizare
+			 - Cunostinte limba engleza nivel mediu
+			 - Cunostinte operare MS Office nivel mediu
+			 - Abilitati de comunicare si organizare
+	atribute: - Intomirea lunara a rapoartelor privind sanctiunile aplicate
+			  - Introducerea datelor trasmise in regimul electronic de evidenta a angajatilor
+			  - Informarea permanenta cu privire la modificarile survenite in legislatia muncii membrilor ehipei in care activeaza pentru a se asigura
+			    aplicarea acestora
+	tip: Full-Time
+	experienta: 0-1 ani

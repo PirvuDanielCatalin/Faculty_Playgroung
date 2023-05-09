@@ -1,0 +1,30 @@
+﻿/* Book Index */
+.books-containers {
+    text-align: center;
+    margin: auto;
+}
+
+.book-div {
+    width: 16%;
+    margin: 2rem;
+    display: inline-block;
+    border: 1px solid #686767;
+    border-radius: 5px;
+    box-shadow: 3px -1px #686767;
+}
+
+.book-title {
+    text-align: center;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.book-image-div {
+    padding: 2rem;
+}
+
+.book-image {
+    height: 200px;
+    width: fit-content;
+}
